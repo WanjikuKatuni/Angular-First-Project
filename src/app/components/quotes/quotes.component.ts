@@ -1,6 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Quote } from 'src/app/model/quote';
+import {faThumbsUp} from '@fortawesome/free-solid-svg-icons'
+import { faThumbsDown } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-quotes',
@@ -38,6 +40,9 @@ export class QuotesComponent implements OnInit {
       }
     }
   }
+
+  thumbsUpIcon = faThumbsUp
+  thumbsDownIcon = faThumbsDown
 
   constructor() { }
 
