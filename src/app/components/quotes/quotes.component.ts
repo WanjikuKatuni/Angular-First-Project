@@ -11,6 +11,7 @@ export class QuotesComponent implements OnInit {
   quotes:Quote[]=[
     new Quote (0,"","","",0,new Date(""))
   ]
+  
 
   constructor() { }
 
