@@ -44,11 +44,11 @@
                         &nbsp;
                         &nbsp;
                         &nbsp;
-                        <span *ngIf='i ==bestquote && quote.voteCount>0'><strong>Best Quote</strong></span>
+                        <span *ngIf='i ==bestquote && quote.voteCount>0'><strong style="color: grey">Best Quote</strong></span>
                     </div>
-                    <div class="card-footer" style="font-size:smaller">
+                    <div class="card-footer" style="font-size:x-small; color: gray;">
                         <p>votes: {{quote.voteCount}}</p>
-                        <p>posted:{{quote.dateCreated | date}}</p>
+                        <p>posted:{{quote.dateCreated | dateCount}} days ago </p>
                     </div>
                 </div>
             </div>
