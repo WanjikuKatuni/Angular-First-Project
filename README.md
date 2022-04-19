@@ -1,5 +1,7 @@
 # Quotes
 
+Quotes is a project which primarily allows the user to post their favorite quotes, along with its author, and the name of the user. This data is then published and voted for and the highest voted quote is ranked the best. The application also allows the user to see the days elapsed since the quote was created.
+ ![A test Image](./src/assets/quotes.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
 ## Development server
