@@ -1,8 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Quote } from 'src/app/model/quote';
-import {faThumbsUp} from '@fortawesome/free-solid-svg-icons'
-import { faThumbsDown } from '@fortawesome/free-regular-svg-icons';
+import {faThumbsDown, faThumbsUp} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-quotes',
