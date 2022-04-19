@@ -16,11 +16,11 @@
                 <p>{{quote.publisher}}</p>
                 <p>{{quote.voteCount}}</p>
                 <p>{{quote.dateCreated}}</p>
-                <i (click)='upvote(i)' (click)='calculatebestvote()'><fa-icon [icon]='thumbsUpIcon'></fa-icon></i>
+                <i (click)='upvote(i)' (click)='calculatebestvote()'><fa-icon [icon]='thumbsUpIcon' size="2x"></fa-icon></i>
                 &nbsp;
                 &nbsp;
                 &nbsp;
-                <i (click)='downvote(i)'(click)='calculatebestvote()'><fa-icon [icon]='thumbsDownIcon'></fa-icon></i>
+                <i (click)='downvote(i)'(click)='calculatebestvote()'><fa-icon [icon]='thumbsDownIcon' size="2x"></fa-icon></i>
                 <span *ngIf='i ==bestquote && quote.voteCount>0'>Best Quote</span>
             </div>
         </div>
