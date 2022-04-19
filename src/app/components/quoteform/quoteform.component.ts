@@ -10,15 +10,22 @@ import { FormGroup } from '@angular/forms';
 })
 export class QuoteformComponent implements OnInit {
 
-  myForm = new FormGroup ({})
+  quoteQuote!: string;
+  quoteAuthor!: string;
+  quotePublisher!: string;
+  newQuote:any;
+  
 
-  newQuote = new Quote (0,"","","",0, new Date())
+  // myForm = new FormGroup ({})
+
+  // newQuote = new Quote (0,"","","",0, new Date())
 
   @Output() addQuote = new EventEmitter<Quote>()
   
   submitQuote(){
+    this.newQuote =new Quote (0,this.quoteQuote,this.quoteAuthor,this.quotePublisher,0, new Date())
     this.addQuote.emit(this.newQuote);
-    this.myForm.reset()
+    // this.myForm.reset()
     
   }
 

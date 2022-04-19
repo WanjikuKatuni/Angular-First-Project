@@ -4,7 +4,7 @@
     <form  (ngSubmit)='submitQuote()' #quoteForm='ngForm' style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
         <div class="form-group">
             <label for="quote">Quote</label>
-            <textarea class="form-control" id="quote" rows="3" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required></textarea>
+            <textarea class="form-control" id="quote" rows="3" [(ngModel)]="quoteQuote" name="quote" #quote='ngModel' required></textarea>
             <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
                 <p>Quote is required</p>
             </div>
@@ -12,14 +12,14 @@
         <!-- Display{{newQuote.quote}} -->
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
+            <input type="text" class="form-control" id="author" [(ngModel)]="quoteAuthor" name="author" #author='ngModel' required>
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                 <p>Author name is required</p>
             </div>
         </div>
         <div class="form-group">
             <label for="publisher">Publisher</label>
-            <input type="text" class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher='ngModel' required>
+            <input type="text" class="form-control" id="publisher" [(ngModel)]="quotePublisher" name="publisher" #publisher='ngModel' required>
             <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
                 <p>Publisher name is required</p>
             </div>

@@ -4,13 +4,13 @@
         <hr>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5">
             
             <app-quoteform (addQuote)="addNewQuote($event)"></app-quoteform>
             
         </div>
        
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div *ngFor='let quote of quotes;let i=index' class="card">
                     <br>
                     <br>
