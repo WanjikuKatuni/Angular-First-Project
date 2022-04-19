@@ -9,21 +9,50 @@
             <app-quoteform (addQuote)="addNewQuote($event)"></app-quoteform>
             
         </div>
-        <div class="col-md-6">
-            <div *ngFor='let quote of quotes;let i=index'>
-                <p>{{quote.quote}}</p>
-                <p>{{quote.author}}</p>
-                <p>{{quote.publisher}}</p>
-                <p>{{quote.voteCount}}</p>
-                <p>{{quote.dateCreated}}</p>
-                <i (click)='upvote(i)' (click)='calculatebestvote()'><fa-icon [icon]='thumbsUpIcon' size="2x"></fa-icon></i>
-                &nbsp;
-                &nbsp;
-                &nbsp;
-                <i (click)='downvote(i)'(click)='calculatebestvote()'><fa-icon [icon]='thumbsDownIcon' size="2x"></fa-icon></i>
-                <span *ngIf='i ==bestquote && quote.voteCount>0'>Best Quote</span>
+       
+            <div class="col-md-6">
+                <div *ngFor='let quote of quotes;let i=index' class="card">
+                    <br>
+                    <br>
+                    <div class="card-body">
+                        <p style="text-align: center;font-style: italic;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: x-large;">{{quote.quote}}</p>
+                        <p style="text-align: center;font-style: italic; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> Author: {{quote.author}}</p>
+                        <br>
+                        <p style="text-align:center; font-family: Georgia, 'Times New Roman', Times, serif;">by: {{quote.publisher}}</p>
+                    </div>
+                    <div style="text-align:center">
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <i (click)='upvote(i)' (click)='calculatebestvote()'><fa-icon [icon]='thumbsUpIcon' size="2x"></fa-icon></i>
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <i (click)='downvote(i)'(click)='calculatebestvote()'><fa-icon [icon]='thumbsDownIcon' size="2x"></fa-icon></i>
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        &nbsp;
+                        <span *ngIf='i ==bestquote && quote.voteCount>0'><strong>Best Quote</strong></span>
+                    </div>
+                    <div class="card-footer" style="font-size:smaller">
+                        <p>votes: {{quote.voteCount}}</p>
+                        <p>posted:{{quote.dateCreated | date}}</p>
+                    </div>
+                </div>
             </div>
-        </div>
+        
     </div>
    
    

@@ -14,7 +14,7 @@ export class QuotesComponent implements OnInit {
   bestquote:number=0;
   
   quotes:Quote[]=[
-    new Quote (0,"once bitten twice shy","eric","ann",3,new Date(2022,4,19))
+    new Quote (0,"A life spent making mistakes is not only more honorable, but more useful than a life spent doing nothing","George Bernhard Shaw","Annie",3,new Date(2022,4,19))
   ]
   addNewQuote(quote:any){
     let quoteLength=this.quotes.length;
