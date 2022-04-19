@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <h2 class="display-5">Add a quote here</h2>
     <hr>
-    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+    <form  (ngSubmit)='submitQuote()' #quoteForm='ngForm' style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
         <div class="form-group">
             <label for="quote">Quote</label>
             <textarea class="form-control" id="quote" rows="3" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required></textarea>
-            <div [hidden]="quote.valid || description.pristine" class="alert alert-danger">
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
                 <p>Quote is required</p>
             </div>
         </div>
