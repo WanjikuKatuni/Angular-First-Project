@@ -1,18 +1,19 @@
 <div class="container-fluid">
     <h2>Add a quote here</h2>
     <hr>
-    <form>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
             <label for="quote">Quote</label>
-            <textarea class="form-control" id="quote" rows="3" name="quote" required></textarea>
+            <textarea class="form-control" id="quote" rows="3" [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' required></textarea>
         </div>
+        <!-- Display{{newQuote.quote}} -->
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" class="form-control" id="author" required>
+            <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
         </div>
         <div class="form-group">
             <label for="publisher">Publisher</label>
-            <input type="text" class="form-control" id="publisher" required>
+            <input type="text" class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher='ngModel' required>
         </div>
         <button type="submit" class="btn btn-success">Add Quote</button>
     </form>

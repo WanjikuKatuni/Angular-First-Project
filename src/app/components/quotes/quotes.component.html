@@ -1,12 +1,25 @@
 <div class="container-fluid">
-    <h1>Quotes</h1>
+    <h1 class="display-1" style="text-align: center;">Quotes</h1>
     <hr>
     <div class="row">
-        <div class="col-md-4">
-            <!-- insert form component -->
+        <div class="col-md-6">
+            
+            <app-quoteform (addQuote)="addNewQuote($event)"></app-quoteform>
+            
         </div>
-        <div class="col-md-8">
-            <!-- insert quote details component -->
+        <div class="col-md-6">
+            <div *ngFor='let quote of quotes;let i=index'>
+                <p>{{quote.quote}}</p>
+                <p>{{quote.author}}</p>
+                <p>{{quote.publisher}}</p>
+                <p>{{quote.voteCount}}</p>
+                <p>{{quote.dateCreated}}</p>
+                <button (click)='upvote(i)' (click)='calculatebestvote()'>Upvote</button>
+                <button (click)='downvote(i)'(click)='calculatebestvote()'>Downvote</button>
+                <span *ngIf='i ==bestquote && quote.voteCount>0'>Best Quote</span>
+            </div>
         </div>
     </div>
+   
+   
 </div>
