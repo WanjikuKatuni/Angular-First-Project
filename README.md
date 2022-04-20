@@ -15,7 +15,8 @@ Open terminal command line then navigate to the root folder of the application.
 Run ng serve command.
 Navigate to http://localhost:4200/ in your browser.
 
-
+## Link to Live Server
+https://wanjikukatuni.github.io/Angular-First-Project/
 
 ## Development server
 
